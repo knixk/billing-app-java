@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/bt_textView"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_tcp_bt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/exclamatory_Icon"
+        app:layout_constraintEnd_toStartOf="@+id/exclamatory_Icon"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/exclamatory_Icon"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:src="@drawable/green_exclamatory"
+        android:textSize="@dimen/slip_attr_name_text_size"
+        app:layout_constraintBaseline_toBaselineOf="@id/bt_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@id/bt_textView" />
+
+    <TextView
+        android:id="@+id/bt_Device_Name"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_bt_device"
+        android:textColor="@color/black"
+        android:textSize="@dimen/slip_attr_name_text_size"
+        app:layout_constraintBaseline_toBaselineOf="@id/bt_Device_Value"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Device_Value"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tcpIp_Port_Tv"
+        app:layout_constraintTop_toBottomOf="@+id/bt_textView" />
+
+    <EditText
+        android:id="@+id/bt_Device_Value"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/circular_border_white"
+        android:enabled="true"
+        android:gravity="center_horizontal"
+        style="@style/CursorStyle"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:maxLength="20"
+        android:textSize="@dimen/slip_attr_name_text_size"
+        app:layout_constraintEnd_toStartOf="@id/scan_Device_Bt"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintStart_toEndOf="@id/bt_Device_Name"
+        app:layout_constraintTop_toBottomOf="@+id/exclamatory_Icon" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/scan_Device_Bt"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp0"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/circular_border_green"
+        android:enabled="true"
+        android:text="@string/txt_scan_btn"
+        android:textSize="@dimen/sp12"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/bt_connect_Btn"
+        app:layout_constraintDimensionRatio="9:2.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_Device_Value"
+        app:layout_constraintTop_toBottomOf="@+id/exclamatory_Icon"/>
+
+    <TextView
+        android:id="@+id/bt_Ssid_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_ssid"
+        android:textColor="@color/black"
+        android:textSize="@dimen/slip_attr_name_text_size"
+        app:layout_constraintBaseline_toBaselineOf="@id/bt_Ssis_Ed"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Ssis_Ed"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Device_Name" />
+
+    <EditText
+        android:id="@+id/bt_Ssis_Ed"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/circular_border_white"
+        android:enabled="true"
+        android:maxLength="20"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/slip_attr_name_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_connect_Btn"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintStart_toEndOf="@id/bt_Ssid_Tv"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Device_Value"  />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_connect_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp0"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/circular_border_green"
+        android:enabled="true"
+        android:text="@string/txt_connect_btn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBaseline_toBaselineOf="@id/bt_Ssis_Ed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="9:2.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_Ssis_Ed"
+        app:layout_constraintTop_toBottomOf="@+id/scan_Device_Bt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

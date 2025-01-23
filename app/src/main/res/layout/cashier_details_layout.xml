@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cashierDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp8"
+    app:cardElevation="@dimen/dp5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/cashierIdTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/cashier_id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cashier_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:text="@string/txt_colon"
+            android:visibility="visible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cashierIdTv"
+            app:layout_constraintEnd_toStartOf="@+id/cashierName"
+            app:layout_constraintStart_toEndOf="@id/cashierNameTv" />
+
+        <TextView
+            android:id="@+id/cashierId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_123456789"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cashierIdTv"
+            app:layout_constraintStart_toEndOf="@id/cashier_view" />
+
+        <TextView
+            android:id="@+id/cashierNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/cashier_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cashierIdTv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:text="@string/txt_colon"
+            android:visibility="visible"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cashierNameTv"
+            app:layout_constraintEnd_toStartOf="@+id/cashierName"
+            app:layout_constraintStart_toEndOf="@id/cashierNameTv" />
+
+        <TextView
+            android:id="@+id/cashierName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_mohan"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cashierNameTv"
+            app:layout_constraintStart_toEndOf="@id/cashier_view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editEt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp0"
+            android:layout_margin="@dimen/dp5"
+            android:background="@drawable/round_style"
+            android:text="@string/txt_edit"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBaseline_toBaselineOf="@id/cashierNameTv"
+            app:layout_constraintDimensionRatio="3:1.1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/footer_color"
+    android:minHeight="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_version"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/slip_attr_name_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dp30"
+        android:text="@string/txt_powered_by"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintEnd_toEndOf="@id/version"
+        app:layout_constraintTop_toBottomOf="@id/version" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pinelab_logo"
+        app:layout_constraintLeft_toRightOf="@id/power"
+        app:layout_constraintRight_toRightOf="@id/power"
+        app:layout_constraintTop_toBottomOf="@id/version" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

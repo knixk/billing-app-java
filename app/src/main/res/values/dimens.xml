@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bt_text_size">12sp</dimen>
+    <dimen name="slip_attr_name_text_size">15sp</dimen>
+    <dimen name="text_view_text_size">22sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp10">15sp</dimen>
+    <dimen name="dp0">0dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp5">6dp</dimen>
+    <dimen name="dp8">9dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="my_edit_text">50dp</dimen>
+    <dimen name="my_padding">40dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="ic_clear_margin">56dp</dimen>
+</resources>

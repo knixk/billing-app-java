@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://dl.google.com/dl/android/maven2' }
+        gradlePluginPortal()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:3.3.2"
+        classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7'
+        classpath 'org.owasp:dependency-check-gradle:4.0.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+plugins {
+    id 'com.android.library' version '7.0.1' apply false
+    id "org.sonarqube" version "2.7"
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "AndroidPosLib"
+        property "sonar.projectKey", "AndroidPosLib"
+        property 'sonar.host.url', 'http://localhost:9000'
+        property "sonar.language", "java"
+        property "sonar.sources", "src/main/"
+        property "sonar.login", "7e09e90b35409361eb8391001bb6aa5d43d10ac1"
+//        property 'sonar.java.coveragePlugin', 'jacoco'
+        property 'sonar.coverage.jacoco.xmlReportPaths', 'build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml'
+//        property 'sonar.dynamicAnalysis', 'reuseReports'
+  //      property 'sonar.jacoco.reportMissing.force.zero', 'true'
+        property "sonar.exclusions", "**/*Generated.java,**/*Activity.java,**/ScanDevicesAdapter.java,**/OnSelectDeviceListener.java,**/Constants.java,**/TransactionType.java,**/Navigator.java,**/StringUtils.java,**/*Logger.java,**/LogCleanupManager.java,**/LogCleanupReceiver.java,**/BluetoothManager.java,**/ComStatusCheck.java,**/PerformTransaction.java,**/UdpDiscovery.java,**/SocketClient.java"
+    }
+}

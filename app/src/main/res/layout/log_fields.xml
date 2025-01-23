@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/log_Option_CheckBox"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/dark_green"
+        android:text="@string/txt_log_option"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/days_To_Retain_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:text="@string/txt_log_retain"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/log_Option_CheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/log_Retain_Ed"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/log_Retain_Ed"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/circular_border_grey"
+        android:enabled="false"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="3"
+        style="@style/CursorStyle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/days_To_Retain_Tv"
+        app:layout_constraintEnd_toStartOf="@+id/log_Level_Tv"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/days_To_Retain_Tv"/>
+
+    <TextView
+        android:id="@+id/log_Level_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_log_level"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/days_To_Retain_Tv"
+        app:layout_constraintEnd_toStartOf="@+id/log_Level_Ed"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toEndOf="@+id/log_Retain_Ed" />
+
+    <EditText
+        android:id="@+id/log_Level_Ed"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/circular_border_grey"
+        android:enabled="false"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="3"
+        style="@style/CursorStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/log_Level_Tv"
+        app:layout_constraintBaseline_toBaselineOf="@+id/days_To_Retain_Tv" />
+
+    <TextView
+        android:id="@+id/log_Path_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_log_path"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/log_Path_Ed"
+        app:layout_constraintEnd_toStartOf="@+id/log_Path_Ed"
+        app:layout_constraintHorizontal_weight="1.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/log_Path_Ed"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:textSize="@dimen/sp10"
+        android:background="@drawable/circular_border_grey"
+        android:textColor="@color/black"
+        android:enabled="false"
+        android:inputType="text"
+        style="@style/CursorStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/log_Path_Tv"
+        app:layout_constraintTop_toBottomOf="@+id/log_Level_Tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

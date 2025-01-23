@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/dp8"
+    app:cardElevation="@dimen/dp5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/mode_tv_bt"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_tcp_bt"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/deviceTvBt"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_bt_device"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mode_tv_bt" />
+
+        <TextView
+            android:id="@+id/device_col_tv"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:text="@string/txt_colon"
+            android:textColor="@color/black"
+            app:layout_constraintBaseline_toBaselineOf="@+id/deviceTvBt"
+            app:layout_constraintStart_toEndOf="@id/deviceTvBt" />
+
+        <TextView
+            android:id="@+id/deviceIdTvBt"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_hint123"
+            app:layout_constraintBaseline_toBaselineOf="@+id/deviceTvBt"
+            app:layout_constraintStart_toEndOf="@+id/device_col_tv" />
+
+        <TextView
+            android:id="@+id/ssidTvBt"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_ssid"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deviceTvBt" />
+
+        <TextView
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:text="@string/txt_colon"
+            android:textColor="@color/black"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ssidTvBt"
+            app:layout_constraintStart_toEndOf="@id/deviceTvBt" />
+
+        <TextView
+            android:id="@+id/ssidAddTvBt"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ssidTvBt"
+            app:layout_constraintStart_toEndOf="@+id/device_col_tv" />
+
+        <TextView
+            android:id="@+id/slnoTvBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp70"
+            android:text="@string/txt_slno"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/deviceIdTvBt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/slnoColonTvBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:text="@string/txt_colon"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/slnoAddTvBt"
+            app:layout_constraintEnd_toStartOf="@id/portAddTvBt"
+            app:layout_constraintStart_toEndOf="@id/portTvBt" />
+
+        <TextView
+            android:id="@+id/slnoAddTvBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_123456789"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/deviceTvBt"
+            app:layout_constraintStart_toEndOf="@+id/slnoColonTvBt"
+            app:layout_constraintTop_toBottomOf="@id/activate_Btn_bt" />
+
+        <TextView
+            android:id="@+id/portTvBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp70"
+            android:gravity="center"
+            android:text="@string/txt_port"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@id/ssidTvBt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/portColonBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:text="@string/txt_colon"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ssidTvBt"
+            app:layout_constraintEnd_toStartOf="@id/slnoAddTvBt"
+            app:layout_constraintStart_toEndOf="@id/slnoTvBt" />
+
+        <TextView
+            android:id="@+id/portAddTvBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ssidAddTvBt"
+            app:layout_constraintStart_toEndOf="@id/portColonBt"
+            app:layout_constraintTop_toBottomOf="@id/mode_tv_bt" />
+
+        <TextView
+            android:id="@+id/priorityTvBt"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:text="@string/txt_priority1"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ssidTvBt" />
+
+        <TextView
+            android:id="@+id/priorityAddTvBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            app:layout_constraintBaseline_toBaselineOf="@+id/priorityTvBt"
+            app:layout_constraintStart_toEndOf="@id/priorityTvBt"
+            app:layout_constraintTop_toBottomOf="@id/slnoAddTvBt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/activate_Btn_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp0"
+            android:background="@drawable/corner_radius_button"
+            android:backgroundTint="@color/light_green"
+            android:enabled="false"
+            android:text="@string/txt_active_btn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="9:2.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/inActivate_Btn_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp0"
+            android:background="@drawable/corner_radius_button"
+            android:backgroundTint="@color/red_color"
+            android:enabled="false"
+            android:text="@string/txt_Inactive_btn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="9:2.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

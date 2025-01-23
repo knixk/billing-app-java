@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <CheckBox
+        android:id="@+id/connection_FallBack_CheckBox"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/dark_green"
+        android:text="@string/txt_connection_fallback_allowed"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/priority_Tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/priority_Tv"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/priority_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_priority"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/communication_Spinner"
+        app:layout_constraintEnd_toStartOf="@+id/communication_Spinner"
+        app:layout_constraintHorizontal_weight="2.4"
+        app:layout_constraintStart_toEndOf="@+id/connection_FallBack_CheckBox" />
+
+    <Spinner
+        android:id="@+id/communication_Spinner"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:entries="@array/connection_mode_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toEndOf="@+id/priority_Tv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/connection_TimeOut_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/txt_connection_timeout"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/connection_TimeOut_Ed"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_FallBack_CheckBox" />
+
+    <EditText
+        android:id="@+id/connection_TimeOut_Ed"
+        style="@style/CursorStyle"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:background="@drawable/rectangle_style"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBaseline_toBaselineOf="@id/connection_TimeOut_Tv"
+        app:layout_constraintEnd_toStartOf="@+id/connection_Retries_Tv"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/connection_TimeOut_Tv"
+        app:layout_constraintTop_toBottomOf="@+id/connection_FallBack_CheckBox" />
+
+    <TextView
+        android:id="@+id/connection_Retries_Tv"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:text="@string/txt_connection_retries"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/connection_TimeOut_Ed"
+        app:layout_constraintEnd_toStartOf="@+id/connection_Retries_Ed"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/connection_TimeOut_Ed"
+        app:layout_constraintTop_toBottomOf="@+id/priority_Tv"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/connection_Retries_Ed"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp40"
+        android:background="@drawable/rectangle_style"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="3"
+        android:visibility="visible"
+        style="@style/CursorStyle"
+        app:layout_constraintBaseline_toBaselineOf="@id/connection_Retries_Tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/connection_Retries_Tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

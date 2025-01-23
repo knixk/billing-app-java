@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvBillingRe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Billing referrence Number"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/billng_ref_value"
+                app:layout_constraintEnd_toStartOf="@+id/billng_ref_value"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/billng_ref_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/tvBillingRe"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/approveCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Approval Code"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/approveCodeValue"
+                app:layout_constraintEnd_toStartOf="@+id/approveCodeValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBillingRe" />
+
+            <TextView
+                android:id="@+id/approveCodeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode"
+                app:layout_constraintTop_toBottomOf="@+id/billng_ref_value" />
+
+            <!-- Second Pair -->
+            <TextView
+                android:id="@+id/hostResponse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Host Response"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/hostResponseValue"
+                app:layout_constraintEnd_toStartOf="@+id/hostResponseValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode" />
+
+            <TextView
+                android:id="@+id/hostResponseValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse"
+                app:layout_constraintTop_toBottomOf="@+id/approveCodeValue" />
+
+            <!-- Third Pair -->
+            <TextView
+                android:id="@+id/cardNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Card Number"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cardNoValue"
+                app:layout_constraintEnd_toStartOf="@+id/cardNoValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse" />
+
+            <TextView
+                android:id="@+id/cardNoValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponseValue" />
+
+            <TextView
+                android:id="@+id/expdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Expiration Date"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/expdateValue"
+                app:layout_constraintEnd_toStartOf="@+id/expdateValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo" />
+
+            <TextView
+                android:id="@+id/expdateValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/expdate"
+                app:layout_constraintTop_toBottomOf="@+id/cardNoValue" />
+
+            <TextView
+                android:id="@+id/cardHoldersName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cardholder’s Name"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cardHolderNameValue"
+                app:layout_constraintEnd_toStartOf="@+id/cardHolderNameValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expdate" />
+
+            <TextView
+                android:id="@+id/cardHolderNameValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardHoldersName"
+                app:layout_constraintTop_toBottomOf="@+id/expdateValue" />
+
+            <!-- Pair 6 -->
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Card Type"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cardTypeValue"
+                app:layout_constraintEnd_toStartOf="@+id/cardTypeValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardHolderName" />
+
+            <TextView
+                android:id="@+id/cardTypeValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/cardHolderNameValue" />
+
+            <!-- Pair 7 -->
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Invoice Number"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/invNoValue"
+                app:layout_constraintEnd_toStartOf="@+id/invNoValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/invNoValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/cardTypeValue" />
+
+            <!-- Pair 8 -->
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Batch Number"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/batchNoValue"
+                app:layout_constraintEnd_toStartOf="@+id/batchNoValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/batchNoValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/invNoValue" />
+
+            <!-- Repeat the following block for each additional pair -->
+
+            <!-- Pair 9 -->
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Terminal ID"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/terminalIdValue"
+                app:layout_constraintEnd_toStartOf="@+id/terminalIdValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/terminalIdValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/batchNoValue" />
+
+            <!-- Repeat the above block for Pair 10 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 10 -->
+            <TextView
+                android:id="@+id/approveCode0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Loyalty Points Awarded"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/loyalityPointsValue"
+                app:layout_constraintEnd_toStartOf="@+id/loyalityPointsValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/loyalityPointsValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode0"
+                app:layout_constraintTop_toBottomOf="@+id/terminalIdValue" />
+
+            <!-- Repeat the following block for each additional pair -->
+
+            <!-- Pair 11 -->
+            <TextView
+                android:id="@+id/approveCode1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Remark"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/remarkValue"
+                app:layout_constraintEnd_toStartOf="@+id/remarkValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode0" />
+
+            <TextView
+                android:id="@+id/remarkValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode1"
+                app:layout_constraintTop_toBottomOf="@+id/loyalityPointsValue" />
+
+            <!-- Repeat the above block for Pair 12 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 12 -->
+            <TextView
+                android:id="@+id/approveCode2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Transaction Acquirer Name"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/acqNameVAlue"
+                app:layout_constraintEnd_toStartOf="@+id/acqNameVAlue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode1" />
+
+            <TextView
+                android:id="@+id/acqNameVAlue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode2"
+                app:layout_constraintTop_toBottomOf="@+id/remarkValue" />
+
+            <!-- Repeat the following block for each additional pair -->
+
+            <!-- Pair 13 -->
+            <TextView
+                android:id="@+id/approveCode3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Merchant ID"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/merchantIdValue"
+                app:layout_constraintEnd_toStartOf="@+id/merchantIdValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode2" />
+
+            <TextView
+                android:id="@+id/merchantIdValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode3"
+                app:layout_constraintTop_toBottomOf="@+id/acqNameVAlue" />
+
+
+            <!-- Pair 14 -->
+            <TextView
+                android:id="@+id/approveCode4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Retrieval Reference Number"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rrnValue"
+                app:layout_constraintEnd_toStartOf="@+id/rrnValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode3" />
+
+            <TextView
+                android:id="@+id/rrnValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode4"
+                app:layout_constraintTop_toBottomOf="@+id/merchantIdValue" />
+
+            <TextView
+                android:id="@+id/approveCode5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Card Entry Mode"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/CardEntryMode"
+                app:layout_constraintEnd_toStartOf="@+id/CardEntryMode"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode4" />
+
+            <TextView
+                android:id="@+id/CardEntryMode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode5"
+                app:layout_constraintTop_toBottomOf="@+id/rrnValue" />
+
+            <TextView
+                android:id="@+id/approveCode6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Print Cardholder's Name"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cardHolderName"
+                app:layout_constraintEnd_toStartOf="@+id/cardHolderName"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode5" />
+
+            <TextView
+                android:id="@+id/cardHolderName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode6"
+                app:layout_constraintTop_toBottomOf="@+id/CardEntryMode" />
+
+            <!-- Repeat the following block for each additional pair -->
+
+            <!-- Pair 17 -->
+            <TextView
+                android:id="@+id/approveCode7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Merchant Name"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/mercahntNameValue"
+                app:layout_constraintEnd_toStartOf="@+id/mercahntNameValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode6" />
+
+            <TextView
+                android:id="@+id/mercahntNameValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode7"
+                app:layout_constraintTop_toBottomOf="@+id/cardHolderName" />
+
+            <TextView
+                android:id="@+id/approveCode8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Merchant Address"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/merchantAddressValue"
+                app:layout_constraintEnd_toStartOf="@+id/merchantAddressValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode7" />
+
+            <TextView
+                android:id="@+id/merchantAddressValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode8"
+                app:layout_constraintTop_toBottomOf="@+id/mercahntNameValue" />
+
+            <TextView
+                android:id="@+id/approveCode9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Merchant City"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/merchantCity"
+                app:layout_constraintEnd_toStartOf="@+id/merchantCity"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode8" />
+
+            <TextView
+                android:id="@+id/merchantCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/approveCode9"
+                app:layout_constraintTop_toBottomOf="@+id/merchantAddressValue" />
+
+            <!-- Repeat the above block for Pair 20 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 20 -->
+            <TextView
+                android:id="@+id/hostResponse0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Plutus Version"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/plutusVersiom"
+                app:layout_constraintEnd_toStartOf="@+id/plutusVersiom"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/approveCode9" />
+
+            <TextView
+                android:id="@+id/plutusVersiom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse0"
+                app:layout_constraintTop_toBottomOf="@+id/merchantCity" />
+
+            <!-- Pair 21 -->
+            <TextView
+                android:id="@+id/hostResponse1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Acquiring Bank Code"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/AcqBAnkCode"
+                app:layout_constraintEnd_toStartOf="@+id/AcqBAnkCode"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse0" />
+
+            <TextView
+                android:id="@+id/AcqBAnkCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse1"
+                app:layout_constraintTop_toBottomOf="@+id/plutusVersiom" />
+
+            <!-- Repeat the above block for Pair 22 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 22 -->
+            <TextView
+                android:id="@+id/hostResponse2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Reward Redeemed Amount"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rwrdRdmdAmnt"
+                app:layout_constraintEnd_toStartOf="@+id/rwrdRdmdAmnt"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse1" />
+
+            <TextView
+                android:id="@+id/rwrdRdmdAmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse2"
+                app:layout_constraintTop_toBottomOf="@+id/AcqBAnkCode" />
+
+            <!-- Repeat the above block for Pair 23 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 23 -->
+            <TextView
+                android:id="@+id/hostResponse3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Reward Redeemed Points"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rwrdRdmdPoint"
+                app:layout_constraintEnd_toStartOf="@+id/rwrdRdmdPoint"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse2" />
+
+            <TextView
+                android:id="@+id/rwrdRdmdPoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse3"
+                app:layout_constraintTop_toBottomOf="@+id/rwrdRdmdAmnt" />
+
+            <!-- Repeat the above block for Pair 24 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 24 -->
+            <TextView
+                android:id="@+id/hostResponse4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Reward Balance Amount"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rwrdBalanceAmnt"
+                app:layout_constraintEnd_toStartOf="@+id/rwrdBalanceAmnt"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse3" />
+
+            <TextView
+                android:id="@+id/rwrdBalanceAmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse4"
+                app:layout_constraintTop_toBottomOf="@+id/rwrdRdmdPoint" />
+
+            <!-- Repeat the above block for Pair 25 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 25 -->
+            <TextView
+                android:id="@+id/hostResponse5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Reward Balance Points	"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rwrdBalancePoint"
+                app:layout_constraintEnd_toStartOf="@+id/rwrdBalancePoint"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse4" />
+
+            <TextView
+                android:id="@+id/rwrdBalancePoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse5"
+                app:layout_constraintTop_toBottomOf="@+id/rwrdBalanceAmnt" />
+
+            <!-- Repeat the above block for Pair 26 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 26 -->
+            <TextView
+                android:id="@+id/hostResponse6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Charge slip"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/chargeSlip"
+                app:layout_constraintEnd_toStartOf="@+id/chargeSlip"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse5" />
+
+            <TextView
+                android:id="@+id/chargeSlip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse6"
+                app:layout_constraintTop_toBottomOf="@+id/rwrdBalancePoint" />
+
+            <!-- Repeat the above block for Pair 27 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 27 -->
+            <TextView
+                android:id="@+id/hostResponse7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="RFU1"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rfu1"
+                app:layout_constraintEnd_toStartOf="@+id/rfu1"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse6" />
+
+            <TextView
+                android:id="@+id/rfu1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse7"
+                app:layout_constraintTop_toBottomOf="@+id/chargeSlip" />
+
+            <!-- Repeat the above block for Pair 28 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 28 -->
+            <TextView
+                android:id="@+id/hostResponse8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="amount voided"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/voidAmnt"
+                app:layout_constraintEnd_toStartOf="@+id/voidAmnt"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse7" />
+
+            <TextView
+                android:id="@+id/voidAmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse8"
+                app:layout_constraintTop_toBottomOf="@+id/rfu1" />
+
+            <!-- Repeat the above block for Pair 29 to Pair 30, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 29 -->
+            <TextView
+                android:id="@+id/hostResponse9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="RFU3"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/rfu3"
+                app:layout_constraintEnd_toStartOf="@+id/rfu3"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse8" />
+
+            <TextView
+                android:id="@+id/rfu3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/hostResponse9"
+                app:layout_constraintTop_toBottomOf="@+id/voidAmnt" />
+
+            <!-- Pair 30 -->
+            <TextView
+                android:id="@+id/cardNo0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Settlement summary"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/settleSummary"
+                app:layout_constraintEnd_toStartOf="@+id/settleSummary"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostResponse9" />
+
+            <TextView
+                android:id="@+id/settleSummary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo0"
+                app:layout_constraintTop_toBottomOf="@+id/rfu3" />
+
+            <!-- Repeat the following block for each additional pair -->
+
+            <!-- Pair 31 -->
+            <TextView
+                android:id="@+id/cardNo1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Date of Transaction"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/TrxnDate"
+                app:layout_constraintEnd_toStartOf="@+id/TrxnDate"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo0" />
+
+            <TextView
+                android:id="@+id/TrxnDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo1"
+                app:layout_constraintTop_toBottomOf="@+id/settleSummary" />
+
+            <!-- Repeat the above block for Pair 32 to Pair 35, adjusting the IDs and hints accordingly -->
+
+            <!-- Pair 32 -->
+            <TextView
+                android:id="@+id/cardNo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Time of Transaction"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/TrxnTime"
+                app:layout_constraintEnd_toStartOf="@+id/TrxnTime"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo1" />
+
+            <TextView
+                android:id="@+id/TrxnTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo2"
+                app:layout_constraintTop_toBottomOf="@+id/TrxnDate" />
+
+            <!-- Pair 33 -->
+            <TextView
+                android:id="@+id/cardNo3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="PineLabs Client ID"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/PinelabClientId"
+                app:layout_constraintEnd_toStartOf="@+id/PinelabClientId"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo2" />
+
+            <TextView
+                android:id="@+id/PinelabClientId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo3"
+                app:layout_constraintTop_toBottomOf="@+id/TrxnTime" />
+
+            <!-- Pair 34 -->
+            <TextView
+                android:id="@+id/cardNo4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="PineLabs Batch ID"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/PinelabsBatchId"
+                app:layout_constraintEnd_toStartOf="@+id/PinelabsBatchId"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo3" />
+
+            <TextView
+                android:id="@+id/PinelabsBatchId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo4"
+                app:layout_constraintTop_toBottomOf="@+id/PinelabClientId" />
+
+            <!-- Pair 35 -->
+            <TextView
+                android:id="@+id/cardNo5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="PineLabs ROC"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pinelabRoc"
+                app:layout_constraintEnd_toStartOf="@+id/pinelabRoc"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo4" />
+
+            <TextView
+                android:id="@+id/pinelabRoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo5"
+                app:layout_constraintTop_toBottomOf="@+id/PinelabsBatchId" />
+            <!-- Pair 36 -->
+            <TextView
+                android:id="@+id/cardNo6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Transcation Cuurency"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/TrxnCurr"
+                app:layout_constraintEnd_toStartOf="@+id/TrxnCurr"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo5" />
+
+            <TextView
+                android:id="@+id/TrxnCurr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo6"
+                app:layout_constraintTop_toBottomOf="@+id/pinelabRoc" />
+
+            <!-- Pair 37 -->
+            <TextView
+                android:id="@+id/cardNo7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Exchange Rate	"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/exchrate"
+                app:layout_constraintEnd_toStartOf="@+id/exchrate"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo6" />
+
+            <TextView
+                android:id="@+id/exchrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo7"
+                app:layout_constraintTop_toBottomOf="@+id/TrxnCurr" />
+
+            <!-- Pair 38 -->
+            <TextView
+                android:id="@+id/cardNo8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DCC Amount"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dccAmount"
+                app:layout_constraintEnd_toStartOf="@+id/dccAmount"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo7" />
+
+            <TextView
+                android:id="@+id/dccAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo8"
+                app:layout_constraintTop_toBottomOf="@+id/exchrate" />
+
+            <!-- Pair 39 -->
+            <TextView
+                android:id="@+id/cardNo9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Trace Number"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/traceNo"
+                app:layout_constraintEnd_toStartOf="@+id/traceNo"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo8" />
+
+            <TextView
+                android:id="@+id/traceNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/cardNo9"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo8" />
+
+            <!-- Pair 40 -->
+            <TextView
+                android:id="@+id/expdate0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="AID"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/aidValue"
+                app:layout_constraintEnd_toStartOf="@+id/aidValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardNo9" />
+
+            <TextView
+                android:id="@+id/aidValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/expdate0"
+                app:layout_constraintTop_toBottomOf="@+id/traceNo" />
+
+            <!-- Pair 41 -->
+            <TextView
+                android:id="@+id/expdate1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TVR"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tcrValue"
+                app:layout_constraintEnd_toStartOf="@+id/tcrValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expdate0" />
+
+            <TextView
+                android:id="@+id/tcrValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/expdate1"
+                app:layout_constraintTop_toBottomOf="@+id/aidValue" />
+
+            <!-- Pair 42 -->
+            <TextView
+                android:id="@+id/expdate2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ARQc"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/arqcValue"
+                app:layout_constraintEnd_toStartOf="@+id/arqcValue"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expdate1" />
+
+            <TextView
+                android:id="@+id/arqcValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/expdate2"
+                app:layout_constraintTop_toBottomOf="@+id/tcrValue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
